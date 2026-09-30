@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facts About September 30th</title>
+  <link rel="stylesheet" href="factsstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+
+ 
+<div id="rotate-warning">
+  <p>PLZ rotate your device horizontally</p>
+</div>
+<div class="main-container" id="main-container"></div> 
+<a href="mainpage.html" class="pixel-home-btn">GO TO MAIN PAGE</a>
+  <div class="facts-container">
+    
+
+    
+    <div class="window-box">
+      <div class="window-header">
+        <span class="window-title">ABOUT SEPTEMBER 30TH</span>
+        <div class="window-controls">
+          <span class="dot white"></span>
+          <span class="dot black"></span>
+        </div>
+      </div>
+      
+      <div class="window-content">
+        
+        <p id="fact-text" class="fact-text"></p>
+
+        
+        <div class="fact-navigation">
+          <button class="arrow-btn left" onclick="changeFact(-1)"></button>
+          <span id="fact-counter" class="fact-counter">1/4</span>
+          <button class="arrow-btn right" onclick="changeFact(1)"></button>
+        </div>
+      </div>
+    </div>
+
+    
+<div class="pinboard-box">
+
+
+  
+  <div class="polaroid top-polaroid" onclick="togglePolaroid(this)">
+    <div class="pin-black"></div>
+    <div class="img-frame">
+      <img id="img-top" src="sapphire1.jfif" alt="Fact Image Top">
+      <p id="note-top" class="polaroid-text">HELLO THERE</p>
+    </div>
+  </div>
+
+  
+  <div class="polaroid bottom-polaroid" onclick="togglePolaroid(this)">
+    <div class="pin-black"></div>
+    <div class="img-frame">
+      <img id="img-bottom" src="sapphire2.jfif" alt="Fact Image Bottom">
+      <p id="note-bottom" class="polaroid-text">HELLO THERE</p>
+    </div>
+  </div>
+
+
+
+</div>
+
+  </div>
+
+  <script src="factsscript.js"></script>
+</body>
+</html>

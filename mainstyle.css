@@ -1,0 +1,363 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', monospace;
+  user-select: none;
+}
+
+html, body {
+  width: 100%; 
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  
+  background: url('backgroundmain.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  overflow: auto !important;
+}
+
+.main-container {
+  display: flex;
+  gap: 30px; 
+  align-items: center;
+  justify-content: center;
+  width: 670px; 
+  margin: 60px auto 40px auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+.window-box {
+  background-color: #ffffff;
+  border: 4px solid #f11c7f !important;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+
+
+.left-window {
+  width: 700px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-window {
+  width: 510px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: rotate(-15deg) scale(1);
+  }
+  50% {
+    transform: rotate(-15deg) scale(1.08); 
+  }
+  100% {
+    transform: rotate(-15deg) scale(1);
+  }
+}
+
+
+.deco-hbday {
+  position: absolute;
+  top: -68px;      
+  left: -57px;     
+  width: 300px;    
+  z-index: 10;
+  pointer-events: none;
+  transform: rotate(-15deg);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.window-header {
+  background-color: #ff3399;
+  border-bottom: 4px solid #f11c7f;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-title {
+  font-size: 11px;
+  color: #000000;
+  letter-spacing: 0.5px;
+}
+
+.left-window .window-title {
+  margin-left: 140px; 
+}
+
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #ffffff;
+  border: 2px solid #000;
+
+}
+
+
+.window-body {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-body {
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+}
+
+
+.note-content {
+  font-size: 11px;
+  line-height: 2;
+  color: #000000;
+  text-align: center;
+  word-break: break-word;
+  max-width: 90%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+.pagination-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.page-indicator {
+  font-size: 11px;
+  color: #000000;
+}
+
+
+.pixel-arrow, .card-arrow {
+  width: 22px;
+  height: 22px;
+  background-color: #000000;
+  flex-shrink: 0;
+  clip-path: polygon(
+    0% 35%, 
+    35% 35%, 
+    35% 0%, 
+    100% 50%, 
+    35% 100%, 
+    35% 65%, 
+    0% 65%
+  );
+}
+
+
+.left-arrow {
+  transform: rotate(180deg);
+}
+
+
+.right-arrow {
+  transform: rotate(0deg);
+}
+
+.arrow-btn:active {
+  transform: scale(0.9);
+}
+
+
+
+
+
+
+
+
+.right-body {
+  gap: 12px;
+  padding-top: 15px;
+}
+
+.nav-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #000000;
+  padding: 12px 10px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 10px; 
+  line-height: 1.5;
+  background-color: #ffffff;
+  transition: transform 0.1s;
+}
+
+.nav-card:hover {
+  background-color: #fff0f6;
+  transform: translateX(3px);
+}
+
+
+
+.pink-text {
+  color: #ff007f;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: rotate(-15deg) scale(1);
+  }
+  50% {
+    transform: rotate(-15deg) scale(1.08); 
+  }
+  100% {
+    transform: rotate(-15deg) scale(1);
+  }
+}
+.deco-discoball {
+  position: absolute;
+  bottom: -55px;   
+  left: -55px;     
+  width: 140px;    
+  z-index: 10;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: rotate(-15deg) scale(1);
+  }
+  50% {
+    transform: rotate(-15deg) scale(1.08); 
+  }
+  100% {
+    transform: rotate(-15deg) scale(1);
+  }
+}
+.deco-balloon {
+  position: absolute;
+  bottom: -45px;   
+  right: -50px;    
+  width: 140px;    
+  z-index: 10;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.confetti-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none; 
+  z-index: 1; 
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+}
+
+.custom-strike {
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #ff007f; 
+}
+
+
+::-webkit-scrollbar {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffb3d9 !important;
+  border: 2px solid #000000 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff007f !important;
+  border: 2px solid #000000 !important;
+  box-shadow: inset -2px -2px 0px #800040 !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc0066 !important;
+}
+
+
+
+
+#rotate-warning {
+  display: none;
+}
+
+@media screen and (orientation: portrait) {
+  .main-container {
+    display: none !important;
+  }
+
+  #rotate-warning {
+    display: flex !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #000000 !important;
+    z-index: 999999 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  #rotate-warning p {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 11px;
+    line-height: 1.8;
+    color: #ff66b2;
+    margin: 0;
+  }
+}
+
+/* Mobil Yatay (Landscape) Ekranlar İçin Orantılı Küçültme */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .main-container {
+    transform: scale(0.85); /* Sayfa öğelerini %85 oranında küçültür */
+    transform-origin: top center; /* Küçülme aksını üst ortada sabitler */
+    margin-top: 20px !important; /* Mobil görünümde üst boşluğu daraltır */
+  }
+
+  .pixel-home-btn {
+    transform: scale(0.85);
+    transform-origin: top left;
+    top: 10px !important;
+    left: 10px !important;
+  }
+}

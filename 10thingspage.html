@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Things I Hate About You</title>
+  <link rel="stylesheet" href="10thingsstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="rotate-warning">
+  <p>PLZ rotate your device horizontally</p>
+</div>
+
+
+  
+  <div class="main-container" id="main-container">
+
+
+    
+    <a href="mainpage.html" class="pixel-home-btn">GO TO MAIN PAGE</a>
+
+    
+    <div class="window-box">
+      <div class="window-header">
+        <span>10 THINGS I LOVE ABOUT YOU</span>
+        <div class="window-dots"><span></span><span></span></div>
+      </div>
+
+      
+      <div class="folders-grid">
+        <div class="folder-item" onclick="openNote(1)">
+          <img src="cutefolder.png" alt="Folder 1">
+          <span>1.</span>
+        </div>
+        <div class="folder-item" onclick="openNote(2)">
+          <img src="cutefolder.png" alt="Folder 2">
+          <span>2.</span>
+        </div>
+        <div class="folder-item" onclick="openNote(3)">
+          <img src="cutefolder.png" alt="Folder 3">
+          <span>3.</span>
+        </div>
+        <div class="folder-item" onclick="openNote(4)">
+          <img src="cutefolder.png" alt="Folder 4">
+          <span>4.</span>
+        </div>
+        <div class="folder-item" onclick="openNote(5)">
+          <img src="cutefolder.png" alt="Folder 5">
+          <span>5.</span>
+        </div>
+        <div class="folder-item" onclick="openNote(6)">
+          <img src="cutefolder.png" alt="Folder 6">
+          <span>6.</span>
+        </div>
+        <div class="folder-item" onclick="openNote(7)">
+          <img src="cutefolder.png" alt="Folder 7">
+          <span>7.</span>
+        </div>
+        <div class="folder-item" onclick="openNote(8)">
+          <img src="cutefolder.png" alt="Folder 8">
+          <span>8.</span>
+        </div>
+        <div class="folder-item" onclick="openNote(9)">
+          <img src="cutefolder.png" alt="Folder 9">
+          <span>9.</span>
+        </div>
+        <div class="folder-item" onclick="openNote(10)">
+          <img src="cutefolder.png" alt="Folder 10">
+          <span>10.</span>
+        </div>
+      </div>
+    </div>
+
+    
+    <img src="tentihabyou2.png" class="sticker-logo" alt="10 Things Logo">
+
+  
+    <div class="character-container" onclick="spawnPixelHearts(event)">
+      <img src="malay2.png" class="character-img" alt="Pixel Character">
+    </div>
+
+  </div>
+
+  
+  <div class="modal-overlay" id="modal-overlay" onclick="closeNote()">
+    <div class="paper-modal" onclick="event.stopPropagation()">
+      <button class="close-btn" onclick="closeNote()">✕</button>
+      <div class="paper-content">
+        <h3 id="note-title">REASON #1</h3>
+        <p id="note-text">Mesaj buraya gelecek...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="10thingsscript.js"></script>
+</body>
+</html>

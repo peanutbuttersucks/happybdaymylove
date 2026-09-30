@@ -1,0 +1,346 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url('backgroundfacts.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  overflow: auto !important; 
+  position: relative;
+}
+
+
+/* Ana Sayfaya Dön Butonu - EKRANA ÇAKILI */
+.pixel-home-btn {
+  position: fixed !important; /* Ekran camına çiviler, sayfa kaysa da buton kaymaz */
+  top: 20px;
+  left: 20px;
+  background: #f8bbd0;
+  color: #ffffff;
+  padding: 10px 14px;
+  font-size: 18px;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  box-shadow: 4px 4px 0 #000000;
+  z-index: 5 !important; /* Pembe kutunun üstünde kalmasını sağlar */
+  transition: transform 0.15s ease;
+}
+
+/* Mouse gelince büyüme */
+.pixel-home-btn:hover {
+  transform: scale(1.05) !important;
+  background-color: #ffb3d9;
+}
+
+
+.pixel-arrow-left {
+  width: 28px; 
+  height: 28px;
+  background-color: #000;
+  clip-path: polygon(40% 0%, 40% 30%, 100% 30%, 100% 70%, 40% 70%, 40% 100%, 0% 50%);
+}
+
+
+.facts-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1100px;
+  margin: 80px auto 40px auto; 
+  position: relative;
+}
+
+
+.window-box {
+  width: 410px;
+  background-color: #fce4ec;
+  border: 4px solid #000;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-header {
+  background-color: #f8bbd0;
+  border: 3px solid #000;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.window-title {
+  font-size: 11px;
+  color: #000;
+}
+
+.window-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  display: inline-block;
+}
+
+.dot.white { background-color: #fff; }
+.dot.black { background-color: #000; }
+
+.window-content {
+  background-color: #fff;
+  border: 3px solid #000;
+  padding: 20px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fact-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #000;
+  text-transform: uppercase;
+}
+
+
+.fact-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.fact-counter {
+  font-size: 12px;
+}
+
+.arrow-btn {
+  width: 32px;
+  height: 32px;
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.arrow-btn.left {
+  clip-path: polygon(40% 0%, 40% 30%, 100% 30%, 100% 70%, 40% 70%, 40% 100%, 0% 50%);
+}
+
+.arrow-btn.right {
+  clip-path: polygon(0% 30%, 60% 30%, 60% 0%, 100% 50%, 60% 100%, 60% 70%, 0% 70%);
+}
+
+.arrow-btn:active {
+  transform: scale(0.9);
+}
+
+
+.pinboard-box {
+  width: 480px;
+  height: 520px;
+  background-color: #fce4ec;
+  border: 4px solid #000;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.polaroid {
+  background-color: #fff;
+  border: 3px solid #000;
+  padding: 12px 12px 35px 12px;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-polaroid {
+  top: 30px;
+  left: 40px;
+  transform: rotate(-6deg);
+  z-index: 1;
+}
+
+.bottom-polaroid {
+  bottom: 30px;
+  right: 40px;
+  transform: rotate(5deg);
+  z-index: 2;
+}
+
+
+.img-frame {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+}
+
+
+.polaroid-text {
+  position: absolute;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  z-index: 1;
+  margin: 0;
+}
+
+
+.polaroid.hide-image .img-frame img {
+  opacity: 0;
+}
+
+
+.pin-black {
+  width: 14px;
+  height: 14px;
+  background-color: #000;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+
+.fact-text u {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+.c-cyan { color: #40e0d0; }
+.c-pink { color: #ff69b4; }
+.c-blue { color: #1e3f66; }
+.c-red { color: #b22222; }
+.c-grey { color: #d3d3d3; }
+.c-green { color: #556b2f; }
+.c-brown { color: #8b4513; } 
+.c-sapphire { color: #0f52ba; }
+
+
+
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffb3d9;
+  border: 2px solid #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff007f;
+  border: 2px solid #000000;
+  box-shadow: inset -2px -2px 0px #800040;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc0066;
+}
+
+
+#rotate-warning {
+  display: none;
+}
+
+@media screen and (orientation: portrait) {
+  .facts-container, .pixel-home-btn {
+    display: none !important;
+  }
+
+  #rotate-warning {
+    display: flex !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #000000 !important;
+    z-index: 9999 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  #rotate-warning p {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 11px;
+    line-height: 1.8;
+    color: #f8bbd0;
+    margin: 0;
+  }
+}
+
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .facts-container {
+    transform: scale(0.70) !important;
+    transform-origin: center top !important;
+    margin: 15px auto !important;
+  }
+
+  /* Transform KULLANMADAN boyutu küçültüyoruz */
+  .pixel-home-btn {
+    position: fixed !important;
+    transform: none !important; /* Fixed'ı bozan transform'u tamamen sıfırlıyoruz */
+    top: 10px !important;
+    left: 10px !important;
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+  }
+
+  .pixel-home-btn:hover {
+    transform: none !important;
+    background-color: #ffb3d9 !important;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Small Things That Remind Me Of You</title>
+  <link rel="stylesheet" href="remindme.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   
+<div id="rotate-warning">
+  <p>PLZ rotate your device horizontally</p>
+</div>
+
+
+  <div class="main-container" id="main-container">
+    
+      
+    <a href="mainpage.html" class="pixel-home-btn">GO TO MAIN PAGE</a>
+
+    <div class="top-title-bar">
+      <span>SMALL THINGS THAT REMIND ME OF YOU ♡</span>
+      <div class="window-dots"><span></span><span></span></div>
+    </div>
+
+    <div class="heart-grid">
+  
+  <div class="grid-item" style="grid-column: 2; grid-row: 1;" onclick="openPhotoModal(0)"><img src="amusementpark.png" alt="Amusement Park"></div>
+  <div class="grid-item" style="grid-column: 3; grid-row: 1;" onclick="openPhotoModal(4)"><img src="dubaichocolate.png" alt="Dubai Chocolate"></div>
+  <div class="grid-item" style="grid-column: 5 / span 2; grid-row: 1 / span 2;" onclick="openPhotoModal(10)"><img src="cutelilbunny.png" alt="Cute Bunny"></div>
+
+  
+  <div class="grid-item" style="grid-column: 1; grid-row: 2;" onclick="openPhotoModal(1)"><img src="nyc.png" alt="NYC View"></div>
+  <div class="grid-item" style="grid-column: 2 / span 2; grid-row: 2 / span 2;" onclick="openPhotoModal(5)"><img src="cozywinter.png" alt="Cozy Winter Room"></div>
+  <div class="grid-item" style="grid-column: 4; grid-row: 2;" onclick="openPhotoModal(7)"><img src="cinnamonroll.png" alt="Cinnamon Roll"></div>
+  
+  <div class="grid-item" style="grid-column: 7; grid-row: 2;" onclick="openPhotoModal(11)"><img src="pinkhibiscus.png" alt="Pink Flower"></div>
+
+  
+  <div class="grid-item" style="grid-column: 1; grid-row: 3;" onclick="openPhotoModal(2)"><img src="2000s.png" alt="2000s Movies"></div>
+  <div class="grid-item" style="grid-column: 4; grid-row: 3;" onclick="openPhotoModal(8)"><img src="clarinet.png" alt="Clarinet"></div>
+  <div class="grid-item" style="grid-column: 5 / span 2; grid-row: 3 / span 2;" onclick="openPhotoModal(13)"><img src="sunrise.png" alt="Sunrise Beach"></div>
+  
+  <div class="grid-item" style="grid-column: 7; grid-row: 3;" onclick="openPhotoModal(12)"><img src="thecurelyrics.png" alt="The Cure Lovesong"></div>
+
+  
+  <div class="grid-item" style="grid-column: 2; grid-row: 4;" onclick="openPhotoModal(3)"><img src="starbucksdrink.png" alt="Starbucks Drinks"></div>
+  <div class="grid-item" style="grid-column: 3 / span 2; grid-row: 4 / span 2;" onclick="openPhotoModal(6)"><img src="sunlightthroughthewindow.png" alt="Sunlight Room"></div>
+
+  
+  <div class="grid-item" style="grid-column: 5; grid-row: 5;" onclick="openPhotoModal(14)"><img src="hotpink.png" alt="Pink Hearts"></div>
+  <div class="grid-item" style="grid-column: 4; grid-row: 6;" onclick="openPhotoModal(9)"><img src="bedazzle.png" alt="Bedazzle Gems"></div>
+</div>
+
+
+  
+  <div class="modal-overlay" id="photo-modal" onclick="closePhotoModal()">
+    <div class="modal-content-wrapper" onclick="event.stopPropagation()">
+      
+      
+      <div class="modal-img-container">
+        <button class="close-btn" onclick="closePhotoModal()">✕</button>
+        <img id="modal-img" class="modal-img" src="" alt="Expanded View">
+      </div>
+
+      
+      <div class="modal-text-box">
+        <p id="modal-text"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="remindme.js"></script>
+</body>
+</html>

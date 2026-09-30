@@ -1,0 +1,315 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: auto !important;
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('10thingsbackground.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.main-container {
+  width: 880px;
+  height: 545px;
+  position: relative;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin: 20px auto;
+  transition: filter 0.3s ease;
+}
+
+
+
+.main-container.blurred {
+  filter: blur(8px);
+}
+
+
+.pixel-home-btn {
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  background: #000;
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 20px;
+  text-decoration: none;
+  border: 2px solid #fff;
+  box-shadow: 4px 4px 0 #ff007f;
+  z-index: 5;
+}
+
+.pixel-home-btn:hover {
+  transform: scale(1.05); 
+}
+
+
+.window-box {
+  width: 510px;
+  background: #ff66b2;
+  border: 4px solid #000;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.window-header {
+  background: #ffa9ca;
+  border: 2px solid #000;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #000;
+}
+
+.window-dots span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: #000;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+
+
+.folders-grid {
+  background: #fff;
+  border: 2px solid #000;
+  margin-top: 8px;
+  padding: 25px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.folder-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.folder-item:hover {
+  transform: scale(1.1);
+}
+
+.folder-item img {
+  width: 85px;
+  height: auto;
+}
+
+.folder-item span {
+  font-size: 10px;
+  color: #000;
+  margin-top: 5px;
+}
+
+
+
+@keyframes pulse {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.08); 
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+.sticker-logo {
+  position: absolute;
+  bottom:40px;
+  left: 20px;
+  width: 197px;
+  z-index: 5;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+
+.character-container {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  z-index: 5;
+  cursor: pointer;
+  
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Kız Görseli */
+.character-img {
+  height: 320px;
+  display: block;
+  pointer-events: none; 
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.08); 
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.paper-modal {
+  width: 360px;
+  height: 370px;
+  background-image: url('paper.png');
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #000;
+  box-shadow: 8px 8px 0px rgba(0,0,0,0.5);
+  position: relative;
+  padding: 40px 30px 20px 50px; 
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #ff007f;
+  color: #fff;
+  border: 2px solid #000;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  padding: 2px 6px;
+  font-size: 10px;
+}
+
+.paper-content {
+  color: #2b2b2b;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.paper-content h3 {
+  font-size: 11px;
+  margin-bottom: 20px;
+  color: #ff007f;
+}
+
+.paper-content p {
+  font-size: 11px;
+  line-height: 2.2; 
+  white-space: pre-wrap; 
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffb3d9;
+  border: 2px solid #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff007f;
+  border: 2px solid #000000;
+  box-shadow: inset -2px -2px 0px #800040;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc0066;
+}
+
+
+
+
+
+
+#rotate-warning {
+  display: none;
+}
+
+@media screen and (max-width: 950px) and (orientation: portrait) {
+  
+  .main-container {
+    display: none !important;
+  }
+
+  
+  #rotate-warning {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  #rotate-warning p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 11px;
+    line-height: 1.8;
+    color: #ff66b2;
+    margin: 0;
+  }
+}
+
+
+/* Telefon YAN tutulduğunda (Landscape) elementleri orantılı küçültür */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .main-container {
+    transform: scale(0.85); /* %85 oranında küçültür (ihtiyaca göre 0.80 veya 0.75 yapabilirsin) */
+    transform-origin: top center;
+    margin-top: 15px !important;
+  }
+
+  .pixel-home-btn {
+    transform: scale(0.85);
+    transform-origin: top left;
+    top: 10px !important;
+    left: 10px !important;
+  }
+}

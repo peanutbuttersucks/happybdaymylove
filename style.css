@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', monospace;
+  user-select: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: auto !important;
+  background: url('backgroundpasscode.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+.window-container {
+  position: relative;
+  width: 480px;
+  margin: 40px auto 40px auto; 
+}
+
+
+ .deco-key {
+  position: absolute;
+  top: -59px;   
+  left: -79px;  
+  width: 200px; 
+  z-index: 10;
+  transform: rotate(-15deg);
+}
+
+
+.deco-heart {
+  position: absolute;
+  bottom: -48px;
+  left: -90px;
+  width: 150px;
+  z-index: 10;
+}
+
+
+.window-header {
+  background-color: #bfa1e6;
+  border-bottom: 4px solid #1a0826;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-title {
+  font-size: 10px;
+  color: #1a0826;
+  visibility: hidden; 
+}
+
+.window-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #1a0826;
+  display: inline-block;
+}
+
+.dot.light {
+  background-color: #b182e0;
+}
+
+.dot.dark {
+  background-color: #5d338a;
+}
+
+
+.window-body {
+  display: flex;
+  padding: 30px;
+  gap: 20px;
+  background-color: #ffffff;
+  position: relative;
+  min-height: 300px;
+}
+
+
+.keypad-section {
+  width: 230px;
+  border: 3px solid #1a0826;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.passcode-header {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.passcode-display {
+  width: 100%;
+  height: 35px;
+  border: 2px solid #1a0826;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  letter-spacing: 4px;
+  background-color: #f9f9f9;
+}
+
+.keypad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+
+.key-btn {
+  background-color: #ffffff;
+  border: 2px solid #1a0826;
+  padding: 10px 0;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #1a0826;
+  transition: all 0.05s ease;
+}
+
+.key-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #1a0826;
+}
+
+.action-btn {
+  background-color: #e3d2ff;
+  font-size: 10px;
+}
+
+
+.clue-section {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.purple-note {
+  position: absolute;
+  width: 220px;
+  top: 10px;
+  left: 20px;
+  transform: rotate(-10deg);
+  opacity: 0.95;
+}
+
+.white-note-wrapper {
+  position: relative;
+  width: 210px;
+  transform: rotate(6deg);
+  z-index: 2;
+}
+
+.white-note {
+  width: 100%;
+  display: block;
+}
+
+
+.tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg); 
+  width: 45px;
+  height: 20px;
+  background-color: #6a2b8e;
+  opacity: 0.85;
+  z-index: 5;
+}
+
+.clue-text {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  width: 80%;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #bfa1e6;
+  border: 2px solid #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b182e0;
+  border: 2px solid #000000;
+  box-shadow: inset -2px -2px 0px #800040;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6a2b8e;
+}
+
+
+
+#rotate-warning {
+  display: none;
+}
+
+@media screen and (orientation: portrait) {
+  
+  .window-container {
+    display: none !important;
+  }
+
+  
+  #rotate-warning {
+    display: flex !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #000000 !important;
+    z-index: 999999 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  #rotate-warning p {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 11px;
+    line-height: 1.8;
+    color: #5d338a;
+    margin: 0;
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Your Own Cake!</title>
+  <link rel="stylesheet" href="cakestyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+<body>
+  
+ 
+<div id="rotate-warning">
+  <p>PLZ rotate your device horizontally</p>
+</div>
+
+<a href="mainpage.html" class="pixel-home-btn">GO TO MAIN PAGE</a>
+
+  
+  <div class="window-container">
+    
+    <div class="window-header">
+      <span class="window-title">MAKE YOUR OWN CAKE!</span>
+      <div class="window-dots">
+        <span class="dot white"></span>
+        <span class="dot pink"></span>
+      </div>
+    </div>
+
+    
+<div class="chef-container">
+  <div id="speech-bubble" class="speech-bubble hidden">Thats a good choice!</div>
+  <img src="chefmalay.png" alt="Chef Malay" class="chef-character">
+</div>
+
+
+
+    
+    <div class="window-content">
+      
+      
+      <div class="cake-preview-box">
+        <img id="layer-cake" class="cake-layer layer-1" src="" alt="Cake Base">
+        <img id="layer-filling" class="cake-layer layer-2" src="" alt="Filling Layer">
+        <img id="layer-topping" class="cake-layer layer-3" src="" alt="Topping Layer">
+        <img id="layer-candles" class="cake-layer layer-4" src="" alt="Candles Layer">
+      </div>
+
+      
+      <div class="controls-box">
+        
+        
+        <div class="control-row">
+          <button class="nav-arrow left" onclick="changeOption('candles', -1)"></button>
+          <div class="option-display" id="display-candles">CANDLE NAME</div>
+          <button class="nav-arrow right" onclick="changeOption('candles', 1)"></button>
+        </div>
+
+        
+        <div class="control-row">
+          <button class="nav-arrow left" onclick="changeOption('topping', -1)"></button>
+          <div class="option-display" id="display-topping">TOPPING NAME</div>
+          <button class="nav-arrow right" onclick="changeOption('topping', 1)"></button>
+        </div>
+
+        
+        <div class="control-row">
+          <button class="nav-arrow left" onclick="changeOption('filling', -1)"></button>
+          <div class="option-display" id="display-filling">FILLING NAME</div>
+          <button class="nav-arrow right" onclick="changeOption('filling', 1)"></button>
+        </div>
+
+       
+        <div class="control-row">
+          <button class="nav-arrow left" onclick="changeOption('cake', -1)"></button>
+          <div class="option-display" id="display-cake">CAKE NAME</div>
+          <button class="nav-arrow right" onclick="changeOption('cake', 1)"></button>
+        </div>
+        
+        <div class="controls-box">
+            <button id="save-btn" class="save-btn" onclick="saveCake()">SAVE & DOWNLOAD CAKE</button>
+</div>
+        </div>
+
+
+      </div>
+
+      
+
+    </div>
+  </div>
+
+  
+  <script src="cakescript.js"></script>
+</body>
+</html>

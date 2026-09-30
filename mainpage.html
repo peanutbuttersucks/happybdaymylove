@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+  
+  
+<div id="rotate-warning">
+  <p>PLZ rotate your device horizontally</p>
+</div>
+
+  <img src="pinkconfetti.gif" class="confetti-overlay" alt="Pink Confetti">
+
+  
+  <div class="main-container">
+
+    
+    <div class="window-box left-window">
+      
+      <img src="happybday.png" class="deco-hbday" alt="Happy Birthday Text">
+
+      
+      <div class="window-header">
+        <div class="window-title">HAPPY BIRTHDAY!</div>
+        <div class="window-dots">
+          <span class="dot light"></span>
+          <span class="dot dark"></span>
+        </div>
+      </div>
+
+      
+      <div class="window-body left-body">
+        <div class="note-content" id="noteDisplay">
+          
+        </div>
+
+        
+        <div class="pagination-bar">
+          <button class="arrow-btn" id="prevBtn" onclick="changeNote(-1)">
+            <div class="pixel-arrow left-arrow"></div>
+          </button>
+          
+          <span class="page-indicator" id="pageIndicator">1/2</span>
+          
+          <button class="arrow-btn" id="nextBtn" onclick="changeNote(1)">
+            <div class="pixel-arrow right-arrow"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="window-box right-window">
+      
+      <div class="window-header">
+        <div class="window-title">WHERE TO GO NOW?</div>
+        <div class="window-dots">
+          <span class="dot light"></span>
+          <span class="dot dark"></span>
+        </div>
+      </div>
+
+      
+      <div class="window-body right-body">
+
+        
+        <a href="cakepage.html" class="nav-card">
+          <span>MAKE YOUR OWN CAKE!</span>
+          <div class="card-arrow"></div>
+        </a>
+
+        
+        <a href="factspage.html" class="nav-card">
+          <span>SEE THE FACTS ABOUT YOUR BIRTHDAY</span>
+          <div class="card-arrow"></div>
+        </a>  
+   
+
+    
+
+       
+<a href="10thingspage.html" class="nav-card highlight">
+  <span><span class="pink-text">10 THINGS</span> I <span class="custom-strike">HATE</span> LOVE ABOUT YOU</span>
+  <div class="card-arrow"></div>
+</a>
+
+        
+        <a href="remindme.html" class="nav-card">
+          <span>SMALL THINGS THAT REMIND ME OF YOU</span>
+          <div class="card-arrow"></div>
+        </a>
+
+      </div>
+
+      
+      <img src="discoball.png" class="deco-discoball" alt="Disco Ball">
+      <img src="pixelatedballoon.png" class="deco-balloon" alt="Balloon Dog">
+    </div>
+
+  </div>
+
+  <script src="mainscript.js"></script>
+</body>
+</html>

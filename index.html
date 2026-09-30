@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passcode</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div id="rotate-warning">
+  <p>PLZ rotate your device horizontally</p>
+</div>
+
+
+
+
+  
+  <div class="window-container">
+    
+    <img src="pixelkey.png" class="deco-key" alt="Piksel Anahtar">
+    <img src="pixelheart.png" class="deco-heart" alt="Piksel Kalp">
+
+    
+    <div class="window-header">
+      <div class="window-title">PASSCODE</div>
+      <div class="window-dots">
+        <span class="dot light"></span>
+        <span class="dot dark"></span>
+      </div>
+    </div>
+
+    
+    <div class="window-body">
+      
+      
+      <div class="keypad-section">
+        <div class="passcode-header">PASSCODE</div>
+        
+        
+        <div class="passcode-display" id="display">----</div>
+
+        
+        <div class="keypad-grid">
+          <button class="key-btn" onclick="appendNumber('1')">1</button>
+          <button class="key-btn" onclick="appendNumber('2')">2</button>
+          <button class="key-btn" onclick="appendNumber('3')">3</button>
+          <button class="key-btn" onclick="appendNumber('4')">4</button>
+          <button class="key-btn" onclick="appendNumber('5')">5</button>
+          <button class="key-btn" onclick="appendNumber('6')">6</button>
+          <button class="key-btn" onclick="appendNumber('7')">7</button>
+          <button class="key-btn" onclick="appendNumber('8')">8</button>
+          <button class="key-btn" onclick="appendNumber('9')">9</button>
+          <button class="key-btn action-btn" onclick="clearDisplay()">NO</button>
+          <button class="key-btn" onclick="appendNumber('0')">0</button>
+          <button class="key-btn action-btn" onclick="checkPasscode()">OK</button>
+        </div>
+      </div>
+
+      
+      <div class="clue-section">
+        <img src="purpledecorativepage.png" class="purple-note" alt="Mor Not Kağıdı">
+        
+        <div class="white-note-wrapper">
+          <img src="decorativepage.png" class="white-note" alt="Not Kağıdı">
+          <div class="tape"></div>
+          <div class="clue-text">
+            CLUE: YOUR<br>
+            BIRTH<br>
+            MONTH AND<br>
+            DAY!
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
